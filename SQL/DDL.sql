@@ -115,3 +115,8 @@ CREATE TABLE dbo.client_churn (
         REFERENCES dbo.client_personal_info(customer_id)
 );
 SELECT * FROM dbo.client_churn
+
+
+CREATE NONCLUSTERED INDEX IX_client_personal_generation
+ON dbo.client_personal_info (generation_id);
+GO
